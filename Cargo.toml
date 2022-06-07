@@ -1,0 +1,19 @@
+[package]
+name = "threadbeam"
+version = "0.1.0"
+edition = "2021"
+authors = ["William Venner <william@venner.io>"]
+description = "A simple, specialized channel type for beaming data out of a newly spawned thread"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/WilliamVenner/threadbeam"
+categories = ["concurrency", "no-std", "rust-patterns"]
+keywords = ["channel", "thread", "oneshot", "spsc"]
+
+[features]
+no_std = ["spin"]
+parking_lot = ["dep:parking_lot"]
+
+[dependencies]
+bitflags = "1"
+parking_lot = { version = "0", optional = true }
+spin = { version = "0", optional = true }
